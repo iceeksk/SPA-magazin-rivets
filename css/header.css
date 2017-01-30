@@ -1,0 +1,43 @@
+header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    height: 80px;
+}
+.button-back {
+    width: 70px;
+    height: 70px;
+    margin-left: 20px;
+    background: url("../images/button.png") no-repeat 50% 50% #ffffff;
+    cursor: pointer;
+    border: 0;
+}
+h1 {
+    font-size: 36px;
+    margin-left: 25px;
+}
+.shopping-cart{
+    position: absolute;
+    right: 0;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #d9644a;
+    cursor: pointer;
+}
+.basket-picture {
+    margin-left: 20px;
+}
+.shopping-cart p{
+    font-size: 26px;
+    color: #ffffff;
+}
+.shopping-cart p:first-of-type {
+    margin-left: 100px;
+}
+
+
+

@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 1024px;
+    height: 768px;
+    font-family: SegoeUIRegular;
+}
+
+
+
+#view:before,
+#view:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1024px;
+    height: 10px;
+    background: url("../images/border.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+#view:after{
+    top: 758px;
+}
+
+
+
+.content-wrapper{
+    width: 1024px;
+    height: 100%;
+    overflow: auto;
+}
+.start-wrapper {
+    width: 1004px;
+    height: 620px;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: flex-start;
+    margin-left: 20px;
+}
+
+
+
+.horizontal-only
+{
+    width: auto;
+    max-width: 1024px;
+}

@@ -1,0 +1,96 @@
+.button-buy, .button-clear-all, .button-continue-shopping{
+    font-size: 14px;
+    margin: 0 20px;
+}
+
+.button-buy, .button-clear-all{
+    width: 100px;
+}
+
+.button-continue-shopping{
+    width: 150px;
+}
+
+.cart-wrapper{
+    margin-left: 90px;
+}
+
+.amount-title-wrapper{
+    height: 70px;
+}
+
+.amount-str, .amount-title{
+    color: #ffffff;
+    margin: 6px 0 0 0;
+    text-align: center;
+}
+.amount-title{
+    font-size: 28px;
+    margin: 0;
+}
+
+.cart-of-goods {
+    width: 600px;
+    background-color: #d9644a;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+tr{
+    height: 50px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #bf613f;
+}
+
+th {
+    padding-left: 20px;
+    font-weight: 500;
+}
+
+td {
+    padding-left: 20px;
+    font-weight: 300;
+    vertical-align: middle;
+}
+.cart-of-goods span {
+    font-size: 22px;
+    margin: 0 20px;
+}
+
+.delete-button{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background: url("../images/buttonBasket.png") no-repeat 50% 50% ;
+}
+
+.cart-of-goods .buttons-in-table{
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+}
+
+.clear-and-sum, .continue-and-buy {
+    background-color: #343e40;
+    width: 600px;
+    height: 50px;
+    color: #ffffff;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 26px;
+}
+
+.clear-and-sum p {
+    margin-right: 20px;
+}
+
+.continue-and-buy{
+    background-color: #4ea686;
+    margin-top: 10px;
+    padding: 5px 0;
+}

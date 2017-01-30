@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/startPage.css">
+    <link rel="stylesheet" type="text/css" href="css/categoryPage.css">
+    <link rel="stylesheet" type="text/css" href="css/cartPage.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.css">
+</head>
+<body>
+<div id="view">
+    <header>
+        <button class="button-back" rv-show="view.backButton" rv-on-click="view.backToStartPage"></button>
+        <h1 class="start-page-header" rv-text="view.heading"></h1>
+
+        <div class="shopping-cart" rv-show="view.shoppingCart" rv-on-click="view.goToCartPage">
+            <img src="images/basketPicture.png" class="basket-picture">
+
+            <p>$</p>
+
+            <p>{view.total}</p>
+        </div>
+
+    </header>
+
+
+    <div class="content-wrapper" rv-show="view.startPage">
+        <section class="start-wrapper">
+            <div class="category" rv-each-category="view.data" rv-on-click="view.chooseCategory">
+                <div>
+                    <p rv-text="category.category"></p>
+                </div>
+                <img rv-src="category.img">
+            </div>
+        </section>
+    </div>
+
+<div class="category-wrapper-scroller" rv-show="view.categoryPage">
+    <section class="category-wrapper">
+        <div class="goods-container" rv-each-goods="view.thisCategory">
+            <img rv-src="goods.img">
+
+            <p class="goods-title" rv-text="goods.name"></p>
+
+            <p class="goods-price">${goods.price}</p>
+
+            <div class="for-button">
+                <button class="add-or-min-button" rv-on-click="view.minusAmount">-</button>
+                <div class="amount-title-wrapper">
+                    <p class="amount-str">amount</p>
+
+                    <p class="amount-title" rv-text="goods.amount"></p>
+                </div>
+                <button class="add-or-min-button" rv-on-click="view.addAmount">+</button>
+            </div>
+        </div>
+    </section>
+</div>
+
+    <section class="cart-wrapper" rv-show="view.cartPage">
+
+        <table class="cart-of-goods">
+            <tr>
+                <th>Shop list</th>
+                <th>Amount</th>
+                <th>Price</th>
+            </tr>
+
+            <tr rv-each-in-cart="view.goodsInCart">
+                <td>
+                    <button class="delete-button" rv-on-click="view.delGoodInTable"></button>
+                    <span rv-text="in-cart.name"></span>
+                </td>
+                <td>
+                    <button class="buttons-in-table" rv-on-click="view.minusAmountInCart">-</button>
+                    <span rv-text="in-cart.amount"></span>
+                    <button class="buttons-in-table" rv-on-click="view.addAmountInCart">+</button>
+                </td>
+                <td>
+                    <span>${in-cart.priceOfGoods}</span>
+                </td>
+            </tr>
+
+        </table>
+        <div class="clear-and-sum">
+            <button class="button-clear-all" rv-on-click="view.clearAmount">Clear All</button>
+            <p class="total-sum-in-table">Sum ${view.total}</p>
+        </div>
+        <div class="continue-and-buy">
+            <button class="button-continue-shopping" rv-on-click="view.backToStartPage">Continue shopping</button>
+            <button class="button-buy" rv-on-click="view.buy">Buy</button>
+        </div>
+    </section>
+</div>
+<script type="text/javascript" src="script/jquery-2.1.1.js"></script>
+<script type="text/javascript" src="script/rivets.bundled.min.js"></script>
+<script type="text/javascript" src="script/jquery.jscrollpane.js"></script>
+<script type="text/javascript" src="script/jquery.mousewheel.js"></script>
+
+<!--<script type="text/javascript" src="script/iscroll.js"></script>
+<script type="text/javascript" src="script/myScroll.js"></script>-->
+<script type="text/javascript" src="script/parse.js"></script>
+<script type="text/javascript" src="script/script.js"></script>
+</body>
+</html>
